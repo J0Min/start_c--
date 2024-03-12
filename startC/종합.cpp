@@ -436,3 +436,84 @@ using namespace std; // 분할해서 사용할줄도 알아야함! (통합버전)
 //	delete &P;
 //	return 0;
 //}
+
+//02.06.01
+//#include <cmath>
+//#include <cstdio>
+//#include <cstring>
+//#pragma warning(disable:4996)//strcpy에서 보안오류를 _s나 경고 뜨지않음과 
+//												//해당오류 끄기로 해결가능
+//
+//int main(void) {
+//	char str1[] = "Result";
+//	char str2[30];
+//	strcpy(str2, str1);
+//	printf("%s :  %f \n", str1, sin(0.14)); 
+//	printf("%s :  %f \n", str2, abs(-1.25));
+//	return 0;
+//}
+
+//#pragma warning(disable:4996)
+//#define _CRT_SECURE_NO_WARNINGS
+
+//02.06.문제2-4.1
+//#include <cstring>
+//#pragma warning(disable:4996)
+//int main(void) {
+//	const char *a = "HI "; //영어&숫자 1 but 한글 크기 2
+//	const char *b = "Have a good Day";
+//	char c[50];
+//	int len = strlen(a);
+//	cout << a << "길이: " << len << endl;
+//	strcpy(c, a); //why not *a? 이미 배열의 시작주소를 가르킴
+//	len = strlen(c);
+//	cout << c << " 길이: " << len << endl;
+//	strcat(c, b);
+//	len = strlen(c);
+//	cout << c << " 길이: " << len << endl;
+//	cout  << strcmp(b,a) << endl; //소스와 대상에 따라 1 0 -1 출력, 대상보다 크면 1 같으면 0
+//	return 0;
+//}
+
+//02.06.문제2-4.2
+//#include <ctime>
+//#include <cstdlib>
+//
+//int main(void) {
+//	//int a[5];
+//	srand(time(NULL));
+//	for (int i = 0; i < 5; i++) {
+//		//a[i]= rand() % 100;
+//		cout  << rand() % 100 << endl;
+//	}
+//	return 0;
+//}
+
+//논외로 구조체 이해를 위함
+//#include <stdio.h>
+//// 구조체 정의와 별명 추가를 동시에 함
+//typedef struct _Person {
+//    char name[50];
+//    int age;
+//    float height;
+//} Person;
+//
+//int main() {
+//    // Person 구조체 변수 선언과 초기화
+//    _Person person1 = { "John", 25, 175.5 };
+//     Person person2 = { "Alice", 30, 160.0 };
+//
+//    // person1 정보 출력
+//    printf("Person 1:\n");
+//    printf("Name: %s\n", person1.name);
+//    printf("Age: %d\n", person1.age);
+//    printf("Height: %.1f\n", person1.height);
+//
+//    // person2 정보 출력
+//    printf("\nPerson 2:\n");
+//    printf("Name: %s\n", person2.name);
+//    printf("Age: %d\n", person2.age);
+//    printf("Height: %.1f\n", person2.height);
+//
+//    return 0;
+//}
