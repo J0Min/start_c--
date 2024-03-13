@@ -517,3 +517,134 @@ using namespace std; // 분할해서 사용할줄도 알아야함! (통합버전)
 //
 //    return 0;
 //}
+
+//03.01_1-RacingCar
+//#define ID_LEN 20 //식별 ID
+//#define MAX_SPD 200 //최대속도
+//#define FUEL_STEP 2 //기름 소모
+//#define ACC_STEP 10 //가속량
+//#define BRK_STEP 10 //감속량
+//
+//struct car {
+//	char gamerID[ID_LEN]; //식별 ID
+//	int fuelGauge;				 //연료량
+//	int curSpeed;				 //현재 속도
+//};
+//void ShowCarState(const car& car) {
+//	cout << "소유자 ID: " << car.gamerID << endl;
+//	cout << "연료량: " << car.fuelGauge << "%" << endl;
+//	cout << "현재 속도:" << car.curSpeed << "km/s" << endl << endl;
+//}
+//void Accel(car& car) {
+//	if (car.fuelGauge <= 0)
+//		return;
+//	else
+//		car.fuelGauge -= FUEL_STEP;
+//	if (car.curSpeed + ACC_STEP >= MAX_SPD) {
+//		car.curSpeed = MAX_SPD;
+//		return;
+//	}
+//	car.curSpeed += ACC_STEP;
+//}
+//void Break(car& car) {
+//	if (car.curSpeed < BRK_STEP) {
+//		car.curSpeed = 0;
+//		return;
+//	}
+//	car.curSpeed -= BRK_STEP;
+//}
+//int main(void) {
+//	struct car run99 = { "run99",100,0 };
+//	Accel(run99);
+//	Accel(run99);
+//	ShowCarState(run99);
+//	Break(run99);
+//	ShowCarState(run99);
+//
+//	car run77 = { "run77",100,0 }; // c++에서는 struct 생략가능
+//	Accel(run77);
+//	Break(run77);
+//	ShowCarState(run77);
+//	return 0;
+//}
+
+//03.01_2-RacingCar 구조체에 함수포함
+//#define ID_LEN 20 //식별 ID
+//#define MAX_SPD 200 //최대속도
+//#define FUEL_STEP 2 //기름 소모
+//#define ACC_STEP 10 //가속량
+//#define BRK_STEP 10 //감속량
+//
+//struct car {
+//	char gamerID[ID_LEN]; //식별 ID
+//	int fuelGauge;				 //연료량
+//	int curSpeed;				 //현재 속도
+//
+//	void ShowCarState() { //매개변수 삭제 why? 직접 접근
+//		cout << "소유자 ID: " << gamerID << endl; //접근연산자 .도 삭제
+//		cout << "연료량: " <<fuelGauge << "%" << endl;
+//		cout << "현재 속도:" << curSpeed << "km/s" << endl << endl;
+//	}
+//	void Accel() {
+//		if (fuelGauge <= 0)
+//			return;
+//		else
+//			fuelGauge -= FUEL_STEP;
+//		if (curSpeed + ACC_STEP >= MAX_SPD) {
+//			curSpeed = MAX_SPD;
+//			return;
+//		}
+//		curSpeed += ACC_STEP;
+//	}
+//	void Break() {
+//		if (curSpeed < BRK_STEP) {
+//			curSpeed = 0;
+//			return;
+//		}
+//		curSpeed -= BRK_STEP;
+//	}
+//};
+//
+//int main(void) {
+//	struct car run99 = { "run99",100,0 };
+//	run99.Accel();
+//	run99.Accel();
+//	run99.ShowCarState();
+//	run99.Break();
+//	run99.ShowCarState();
+//
+//	car run77 = { "run77",100,0 }; // c++에서는 struct 생략가능
+//	run77.Accel();
+//	run77.Break();
+//	run77.ShowCarState();
+//	return 0;
+//}
+
+//03.01_end1
+struct Point {
+	int xpos;
+	int ypos;
+	void MovePos(int x, int y) {
+		xpos += x;
+		ypos += y;
+	}
+	void AddPoint(const Point& pos) {
+		xpos += pos.xpos;
+		ypos += pos.ypos;
+	}
+	void ShowPosition() {
+		cout << "[" << xpos << "," << ypos << "]" << endl;
+	}
+};
+
+int main(void) {
+	Point pos1 = { 12,4 };
+	Point pos2 = { 20,30 };
+
+	pos1.MovePos(-7, 10);
+	pos1.ShowPosition();
+
+	pos1.AddPoint(pos2);
+	pos1.ShowPosition();
+	return 0;
+}
