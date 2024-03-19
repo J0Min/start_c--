@@ -712,61 +712,136 @@ using namespace std; // 분할해서 사용할줄도 알아야함! (통합버전)
 //}
 
 //03.01_4-RacingCar 전처리문을 namespace로, 구조체 외부로 함수정의
-namespace CAR_CONST {
-	enum {
-		ID_LEN = 20,
-		MAX_SPD = 200,
-		FUEL_STEP = 2,
-		ACC_STEP = 10,
-		BRK_STEP = 10
-	};
-}
+//namespace CAR_CONST {
+//	enum {
+//		ID_LEN = 20,
+//		MAX_SPD = 200,
+//		FUEL_STEP = 2,
+//		ACC_STEP = 10,
+//		BRK_STEP = 10
+//	};
+//}
+//
+//struct car {
+//	char gamerID[CAR_CONST::ID_LEN]; //식별 ID
+//	int fuelGauge;				 //연료량
+//	int curSpeed;				 //현재 속도
+//	void ShowCarState();
+//	void Accel();
+//	void Break();
+//};
+//
+//	void car::ShowCarState() { 
+//		cout << "소유자 ID: " << gamerID << endl; 
+//		cout << "연료량: " << fuelGauge << "%" << endl;
+//		cout << "현재 속도:" << curSpeed << "km/s" << endl << endl;
+//	}
+//	void car::Accel() {
+//		if (fuelGauge <= 0)
+//			return;
+//		else
+//			fuelGauge -= CAR_CONST::FUEL_STEP;
+//		if (curSpeed + CAR_CONST::ACC_STEP >= CAR_CONST::MAX_SPD) {
+//			curSpeed = CAR_CONST::MAX_SPD;
+//			return;
+//		}
+//		curSpeed += CAR_CONST::ACC_STEP;
+//	}
+//	void car::Break() {
+//		if (curSpeed < CAR_CONST::BRK_STEP) {
+//			curSpeed = 0;
+//			return;
+//		}
+//		curSpeed -= CAR_CONST::BRK_STEP;
+//	}
+//
+//
+//int main(void) {
+//	struct car run99 = { "run99",100,0 };
+//	run99.Accel();
+//	run99.Accel();
+//	run99.ShowCarState();
+//	run99.Break();
+//	run99.ShowCarState();
+//
+//	car run77 = { "run77",100,0 }; // c++에서는 struct 생략가능
+//	run77.Accel();
+//	run77.Break();
+//	run77.ShowCarState();
+//	return 0;
+//}
 
-struct car {
-	char gamerID[CAR_CONST::ID_LEN]; //식별 ID
-	int fuelGauge;				 //연료량
-	int curSpeed;				 //현재 속도
-	void ShowCarState();
-	void Accel();
-	void Break();
-};
-
-	void car::ShowCarState() { //매개변수 삭제 why? 직접 접근
-		cout << "소유자 ID: " << gamerID << endl; //접근연산자 .도 삭제
-		cout << "연료량: " << fuelGauge << "%" << endl;
-		cout << "현재 속도:" << curSpeed << "km/s" << endl << endl;
-	}
-	void car::Accel() {
-		if (fuelGauge <= 0)
-			return;
-		else
-			fuelGauge -= CAR_CONST::FUEL_STEP;
-		if (curSpeed + CAR_CONST::ACC_STEP >= CAR_CONST::MAX_SPD) {
-			curSpeed = CAR_CONST::MAX_SPD;
-			return;
-		}
-		curSpeed += CAR_CONST::ACC_STEP;
-	}
-	void car::Break() {
-		if (curSpeed < CAR_CONST::BRK_STEP) {
-			curSpeed = 0;
-			return;
-		}
-		curSpeed -= CAR_CONST::BRK_STEP;
-	}
-
-
-int main(void) {
-	struct car run99 = { "run99",100,0 };
-	run99.Accel();
-	run99.Accel();
-	run99.ShowCarState();
-	run99.Break();
-	run99.ShowCarState();
-
-	car run77 = { "run77",100,0 }; // c++에서는 struct 생략가능
-	run77.Accel();
-	run77.Break();
-	run77.ShowCarState();
-	return 0;
-}
+//03.02_1-RacingCar 구조체를 클래스로 변경
+//#include <cstring>
+//namespace CAR_CONST {
+//	enum {
+//		ID_LEN = 20,
+//		MAX_SPD = 200,
+//		FUEL_STEP = 2,
+//		ACC_STEP = 10,
+//		BRK_STEP = 10
+//	};
+//}
+//
+//class CAR {
+//private: // 접근 제어 지시자 설정
+//	char gamerID[CAR_CONST::ID_LEN]; //식별 ID
+//	int fuelGauge;				 //연료량
+//	int curSpeed;				 //현재 속도
+//public:
+//	void InitMembers(const char* ID, int fuel); //멤버변수 초기화
+//	void ShowCarState();
+//	void Accel();
+//	void Break();
+//};
+//
+//void CAR::InitMembers(const char* ID, int fuel) {
+//	strcpy_s(gamerID, CAR_CONST::ID_LEN,ID);
+//	fuelGauge = fuel;
+//	curSpeed = 0;
+//}
+//
+//void CAR::ShowCarState() { 
+//	cout << "소유자 ID: " << gamerID << endl;
+//	cout << "연료량: " << fuelGauge << "%" << endl;
+//	cout << "현재 속도:" << curSpeed << "km/s" << endl << endl;
+//}
+//void CAR::Accel() {
+//	if (fuelGauge <= 0)
+//		return;
+//	else
+//		fuelGauge -= CAR_CONST::FUEL_STEP;
+//	if (curSpeed + CAR_CONST::ACC_STEP >= CAR_CONST::MAX_SPD) {
+//		curSpeed = CAR_CONST::MAX_SPD;
+//		return;
+//	}
+//	curSpeed += CAR_CONST::ACC_STEP;
+//}
+//void CAR::Break() {
+//	if (curSpeed < CAR_CONST::BRK_STEP) {
+//		curSpeed = 0;
+//		return;
+//	}
+//	curSpeed -= CAR_CONST::BRK_STEP;
+//}
+//
+//int main(void) {
+//	CAR run99;
+//	char id[] = "run77"; 
+//	//const char[]로 리터럴 되여 값을 전달함 
+//	//그래서 별도 지정이거나 함수에서 const를 지정해야함
+//	run99.InitMembers(id, 100);
+//	run99.Accel();
+//	run99.Accel();
+//	run99.Accel();
+//	run99.ShowCarState();
+//	run99.Break();
+//	run99.ShowCarState();
+//
+//	CAR run77; // c++에서는 struct 생략가능
+//	run77.InitMembers("run77", 100); 
+//	run77.Accel();
+//	run77.Break();
+//	run77.ShowCarState();
+//	return 0;
+//}

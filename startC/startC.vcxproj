@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="01.05_NameSpace_end1.cpp" />
     <ClCompile Include="01.05_NameSpace_end2.cpp" />
+    <ClCompile Include="cpy.cpp" />
     <ClCompile Include="opp_proj1.cpp" />
     <ClCompile Include="종합.cpp" />
   </ItemGroup>
