@@ -141,15 +141,15 @@
   <ItemGroup>
     <ClCompile Include="01.05_NameSpace_end1.cpp" />
     <ClCompile Include="01.05_NameSpace_end2.cpp" />
-    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="03.02_2_Car.cpp" />
     <ClCompile Include="cpy.cpp" />
     <ClCompile Include="opp_proj1.cpp" />
-    <ClCompile Include="RacingMain.cpp" />
+    <ClCompile Include="03.02_2_RacingMain.cpp" />
     <ClCompile Include="종합.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="01.05_NameSpace_end.h" />
-    <ClInclude Include="Car.h" />
+    <ClInclude Include="03.02_2_Car.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
