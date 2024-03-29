@@ -39,12 +39,33 @@
     <ClCompile Include="03.02_2_RacingMain.cpp">
       <Filter>소스 파일\Chapter3</Filter>
     </ClCompile>
+    <ClCompile Include="03.02_end1_main.cpp">
+      <Filter>소스 파일\Chapter3</Filter>
+    </ClCompile>
+    <ClCompile Include="03.02_end1_Calculator.cpp">
+      <Filter>소스 파일\Chapter3</Filter>
+    </ClCompile>
+    <ClCompile Include="03.02_3_CarInline.cpp">
+      <Filter>소스 파일\Chapter3</Filter>
+    </ClCompile>
+    <ClCompile Include="03.02_3_CarInlineMain.cpp">
+      <Filter>소스 파일\Chapter3</Filter>
+    </ClCompile>
+    <ClCompile Include="03.02_end2_main.cpp">
+      <Filter>소스 파일\Chapter3</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="01.05_NameSpace_end.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="03.02_2_Car.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="03.02_end1_Calculator.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="03.02_3_Car.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

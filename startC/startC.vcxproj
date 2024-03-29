@@ -142,6 +142,11 @@
     <ClCompile Include="01.05_NameSpace_end1.cpp" />
     <ClCompile Include="01.05_NameSpace_end2.cpp" />
     <ClCompile Include="03.02_2_Car.cpp" />
+    <ClCompile Include="03.02_3_CarInline.cpp" />
+    <ClCompile Include="03.02_3_CarInlineMain.cpp" />
+    <ClCompile Include="03.02_end1_Calculator.cpp" />
+    <ClCompile Include="03.02_end1_main.cpp" />
+    <ClCompile Include="03.02_end2_main.cpp" />
     <ClCompile Include="cpy.cpp" />
     <ClCompile Include="opp_proj1.cpp" />
     <ClCompile Include="03.02_2_RacingMain.cpp" />
@@ -150,6 +155,8 @@
   <ItemGroup>
     <ClInclude Include="01.05_NameSpace_end.h" />
     <ClInclude Include="03.02_2_Car.h" />
+    <ClInclude Include="03.02_3_Car.h" />
+    <ClInclude Include="03.02_end1_Calculator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,10 @@
-////03.02_2
-//#ifndef CAR_H
-//#define CAR_H
+//#ifndef C_INLINE
+//#define C_INLINE
+//
+//#include <iostream>
+//#include <cstring>
+//using namespace std;
+//
 //namespace CAR_CONST {
 //	enum {
 //		ID_LEN = 20,
@@ -22,4 +26,16 @@
 //	void Accel();
 //	void Break();
 //};
+//inline void CAR::ShowCarState() {
+//	cout << "소유자 ID: " << gamerID << endl;
+//	cout << "연료량: " << fuelGauge << "%" << endl;
+//	cout << "현재 속도:" << curSpeed << "km/s" << endl << endl;
+//}
+//inline void CAR::Break() {
+//	if (curSpeed < CAR_CONST::BRK_STEP) {
+//		curSpeed = 0;
+//		return;
+//	}
+//	curSpeed -= CAR_CONST::BRK_STEP;
+//}
 //#endif
