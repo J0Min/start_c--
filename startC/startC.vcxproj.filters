@@ -16,6 +16,9 @@
     <Filter Include="소스 파일\Chapter3">
       <UniqueIdentifier>{c16814ca-ad8f-4b1e-97b1-35bedf90ade7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Chapter4">
+      <UniqueIdentifier>{b3b53cf5-f5be-4361-b6cd-755b46470c4a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="종합.cpp">
@@ -56,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="03.03_1.cpp">
       <Filter>소스 파일\Chapter3</Filter>
+    </ClCompile>
+    <ClCompile Include="04.01_1.cpp">
+      <Filter>소스 파일\Chapter4</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

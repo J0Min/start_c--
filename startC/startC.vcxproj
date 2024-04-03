@@ -148,6 +148,7 @@
     <ClCompile Include="03.02_end1_main.cpp" />
     <ClCompile Include="03.02_end2_main.cpp" />
     <ClCompile Include="03.03_1.cpp" />
+    <ClCompile Include="04.01_1.cpp" />
     <ClCompile Include="cpy.cpp" />
     <ClCompile Include="opp_proj1.cpp" />
     <ClCompile Include="03.02_2_RacingMain.cpp" />
