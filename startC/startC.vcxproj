@@ -149,7 +149,9 @@
     <ClCompile Include="03.02_end2_main.cpp" />
     <ClCompile Include="03.03_1.cpp" />
     <ClCompile Include="04.01_1.cpp" />
-    <ClCompile Include="cpy.cpp" />
+    <ClCompile Include="04.01_2.cpp" />
+    <ClCompile Include="04.01_2_1.cpp" />
+    <ClCompile Include="04.01_2_2.cpp" />
     <ClCompile Include="opp_proj1.cpp" />
     <ClCompile Include="03.02_2_RacingMain.cpp" />
     <ClCompile Include="종합.cpp" />
@@ -159,6 +161,8 @@
     <ClInclude Include="03.02_2_Car.h" />
     <ClInclude Include="03.02_3_Car.h" />
     <ClInclude Include="03.02_end1_Calculator.h" />
+    <ClInclude Include="04.01_2_Rectangle.h" />
+    <ClInclude Include="04.01_2_Point.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

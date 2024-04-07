@@ -33,9 +33,6 @@
     <ClCompile Include="opp_proj1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="cpy.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="03.02_2_Car.cpp">
       <Filter>소스 파일\Chapter3</Filter>
     </ClCompile>
@@ -63,6 +60,15 @@
     <ClCompile Include="04.01_1.cpp">
       <Filter>소스 파일\Chapter4</Filter>
     </ClCompile>
+    <ClCompile Include="04.01_2_1.cpp">
+      <Filter>소스 파일\Chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="04.01_2_2.cpp">
+      <Filter>소스 파일\Chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="04.01_2.cpp">
+      <Filter>소스 파일\Chapter4</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="01.05_NameSpace_end.h">
@@ -75,6 +81,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="03.02_3_Car.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="04.01_2_Point.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="04.01_2_Rectangle.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
